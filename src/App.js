@@ -1,22 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Users from "./Users";
-import User from "./User";
+import { useState } from "react";
 import Student from "./Student";
 
 function App() {
-  // function Apple() {
-  //   return <div>Apple Component</div>;
-  // }
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <Users />
-      <User />
-      <Student />
-      {/* <Apple></Apple> */}
-      {/* {Apple()} */}
-    </div>
+    <>
+      <div className="App">
+        <Student name={"sakshi"} age={"26"} city={"Pune"} />
+      </div>
+    </>
   );
 }
 
