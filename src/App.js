@@ -1,22 +1,21 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Users from "./Users";
-import User from "./User";
-import Student from "./Student";
+import { useState } from "react";
 
 function App() {
-  // function Apple() {
-  //   return <div>Apple Component</div>;
-  // }
+  const [count, setCount] = useState(0);
+
+  function updateData() {
+    setCount(count + 1);
+  }
+
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <Users />
-      <User />
-      <Student />
-      {/* <Apple></Apple> */}
-      {/* {Apple()} */}
-    </div>
+    <>
+      <div className="App">
+        <h2>{count}</h2>
+        <button onClick={updateData}>Update data</button>
+      </div>
+    </>
   );
 }
 
