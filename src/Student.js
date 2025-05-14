@@ -1,13 +1,9 @@
 import React from "react";
 
-function Student(data) {
+function Student({ data, name }) {
   return (
     <>
-      <ul>
-        <li> {data.name}</li>
-        <li> {data.age}</li>
-        <li>{data.city}</li>
-      </ul>
+      <button onClick={data}>Call Function {name}</button>
     </>
   );
   //without jsx
