@@ -1,18 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-import Student from "./Student";
-import Users from "./Users";
 
 function App() {
-  function getData() {
-    alert("Hello from App component");
-  }
+  const [data, setData] = useState();
+  const [print, setPrint] = useState(false);
+
   return (
     <>
       <div className="App">
-        <Users  name="user" data={getData} />
-        <Student name="student" data={getData} />
+        {print ? <h1>Input Field Value : {data}</h1> : null}
+        <input type="text" onChange={(e) => setData(e.target.value)} />
+        <button onClick={() => setPrint(true)}>Print Data</button>
       </div>
     </>
   );
