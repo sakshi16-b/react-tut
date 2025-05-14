@@ -3,15 +3,16 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [data, setData] = useState();
-  const [print, setPrint] = useState(false);
+  const [show, setShow] = useState(true);
 
   return (
     <>
       <div className="App">
-        {print ? <h1>Input Field Value : {data}</h1> : null}
-        <input type="text" onChange={(e) => setData(e.target.value)} />
-        <button onClick={() => setPrint(true)}>Print Data</button>
+        {show ? <h1>Hello World</h1> : ""}
+
+        {/* <button onClick={() => setShow(true)}>Show</button>
+        <button onClick={() => setShow(false)}>Hide</button> */}
+        <button onClick={() => setShow(!show)}>Show/Hide</button>
       </div>
     </>
   );
