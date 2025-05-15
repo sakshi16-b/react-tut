@@ -1,11 +1,13 @@
-import React from "react";
-function User({ data }) {
+
+import React, { Component } from "react";
+function User({ name = "New User" }) {
+  //default props.If we forgot to pass value to a prop then it will
+  //take default value like sam.
   return (
     <>
-      <p>{data.name}</p>
-      <p>{data.age}</p>
-      <p>{data.city}</p>
-      <hr />
+      <h1>User Component</h1>
+      <h2>Name: {name}</h2>
+
     </>
   );
 }
