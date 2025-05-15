@@ -1,27 +1,31 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-import Student from "./Student";
-import Wrapper from "./Wrapper";
-import User from "./User";
 
 function App() {
+  const [inputval, setInputVal] = useState("");
+  function onClear() {
+    setInputVal("");
+  }
   return (
     <>
       <div className="App">
-        <h1>Props in React js 19</h1>
-        <Wrapper color="orange">
-          <User name="Sakshi Bisht" />
-          <User />
-        </Wrapper>
-        <Wrapper color="blue">
-          <h1>Hello Admin</h1>
-          <h2 style={{ color: "red" }}>Please Login</h2>
-        </Wrapper>
-        <Wrapper>
-          <User name="Sakshi Bisht" />
-          <User />
-        </Wrapper>
+        <h1>Get Input Field value</h1>
+        <br></br>
+        <br></br>
+        <input
+          style={{ padding: "10px" }}
+          type="text"
+          value={inputval}
+          onChange={(e) => setInputVal(e.target.value)}
+          placeholder="Enter value"
+        />
+        <br></br>
+        <br></br>
+        {inputval}
+        <br></br>
+        <br></br>
+        <button onClick={onClear}>Clear</button>
       </div>
     </>
   );
