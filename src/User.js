@@ -1,7 +1,12 @@
-import React, { Component } from "react";
-class User extends Component {
-  render() {
-    return <h1>Hello from User Class Component</h1>;
-  }
+import React from "react";
+function User({ data }) {
+  return (
+    <>
+      <p>{data.name}</p>
+      <p>{data.age}</p>
+      <p>{data.city}</p>
+      <hr />
+    </>
+  );
 }
 export default User;
