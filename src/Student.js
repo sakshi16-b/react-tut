@@ -8,8 +8,8 @@ function Student(data) {
       <p> {data[1]}</p>
       <p>{data[2]}</p>
       <hr />
-    </>
-  );
+
+
   //without jsx
   //  return React.createElement("h1", null, "Hello Student Component");
 }

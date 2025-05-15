@@ -24,6 +24,9 @@ function App() {
   let collegenames = ["IIT", "DU", "JNU", "KU"];
   const [student,setStudent]=useState(["Peter","Sam"])
 
+function App() {
+  
+
   return (
     <>
       <div className="App">
