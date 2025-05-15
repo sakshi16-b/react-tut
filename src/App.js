@@ -1,11 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-import Student from "./Student";
+import Student from "./Student"
 import Wrapper from "./Wrapper";
+import College from "./College";
 import User from "./User";
 
 function App() {
+  
+
   return (
     <>
       <div className="App">
@@ -22,6 +25,7 @@ function App() {
           <User name="Sakshi Bisht" />
           <User />
         </Wrapper>
+       
       </div>
     </>
   );
