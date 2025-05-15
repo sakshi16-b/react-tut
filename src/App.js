@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { useState } from "react";
+import { useState } from "react;
 
 function App() {
   const [name, setName] = useState("");
@@ -12,10 +12,13 @@ function App() {
     setEmail("");
   };
 
-  return (
+
+function App() {
+ 
+return (
     <>
       <div className="App">
-        <h1>Controlled Component</h1>
+  <h1>Controlled Component</h1>
         <br></br>
         <br></br>
         <input
@@ -55,9 +58,7 @@ function App() {
         <h3>{password}</h3>
 
         <h3>{email}</h3>
-      </div>
-    </>
-  );
-}
+
+
 
 export default App;
