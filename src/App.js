@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 
+
 function App() {
   const [inputval, setInputVal] = useState("");
   function onClear() {
@@ -26,6 +27,7 @@ function App() {
         <br></br>
         <br></br>
         <button onClick={onClear}>Clear</button>
+
       </div>
     </>
   );
