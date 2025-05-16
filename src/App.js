@@ -5,6 +5,7 @@ import Skills from "./Skills";
 
 function App() {
   const [gender, setGender] = useState("male");
+  const [city, setCity] = useState("delhi");
   return (
     <>
       <div className="App">
@@ -16,6 +17,7 @@ function App() {
           id="male"
           value="Male"
           name="gender"
+          checked
         />
         <label htmlFor="male"> Male</label>
         <br />
@@ -35,12 +37,17 @@ function App() {
         <br />
         <br />
         <h2>Select City</h2>
-        <select defaultValue={"goa"}>
+        <select
+          defaultValue={"Goa"}
+          onChange={(e) => setCity(e.target.value)}
+          style={{ padding: "10px" }}
+        >
           <option value="Noida">Noida</option>
-          <option value="delhi">Delhi</option>
-          <option value="goa">Goa</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Goa">Goa</option>
           <option value="Gurgaon">Gurgaon</option>
         </select>
+        <h2>Selected City is :{city}</h2>
       </div>
     </>
   );
