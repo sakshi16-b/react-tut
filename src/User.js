@@ -1,12 +1,26 @@
-import React, { Component } from "react";
-function User({ name = "New User" }) {
+function User({ data }) {
   //default props.If we forgot to pass value to a prop then it will
   //take default value like sam.
   return (
-    <>
-      <h1>User Component</h1>
-      <h2>Name: {name}</h2>
-    </>
+    <div
+      style={{
+        border: "1px solid green",
+        padding: "10px",
+        margin: "10px",
+        width: "400px",
+        borderRadius: "10px",
+      }}
+    >
+      <h3>
+        Name: <span style={{ color: "green" }}>{data.name}</span>
+      </h3>
+      <h3>
+        Age: <span style={{ color: "green" }}>{data.age}</span>
+      </h3>
+      <h3>
+        Email: <span style={{ color: "green" }}>{data.email}</span>
+      </h3>
+    </div>
   );
 }
 export default User;
