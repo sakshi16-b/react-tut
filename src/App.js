@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.css"
 import { useState } from "react";
 import Skills from "./Skills";
 
@@ -48,9 +48,9 @@ function App() {
           <option value="Gurgaon">Gurgaon</option>
         </select>
         <h2>Selected City is :{city}</h2>
-      </div>
+
     </>
   );
-}
-
+}         
+       
 export default App;
