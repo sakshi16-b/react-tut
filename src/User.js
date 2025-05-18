@@ -1,6 +1,6 @@
+
 function User({ data }) {
-  //default props.If we forgot to pass value to a prop then it will
-  //take default value like sam.
+  
   return (
     <div
       style={{
@@ -21,6 +21,6 @@ function User({ data }) {
         Email: <span style={{ color: "green" }}>{data.email}</span>
       </h3>
     </div>
-  );
+
 }
 export default User;

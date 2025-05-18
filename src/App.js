@@ -3,9 +3,10 @@ import "./App.css";
 import Clock from "./Clock";
 import { useState } from "react";
 
+
 function App() {
   const [color, setColor] = useState("green");
-  return (
+  return(
     <>
       <h1>Digital Clock in React JS</h1>
       <select onChange={(e) => setColor(e.target.value)}>
@@ -16,7 +17,6 @@ function App() {
       </select>
       <Clock color={color} />
     </>
-  );
-}
-
+);
+       
 export default App;
