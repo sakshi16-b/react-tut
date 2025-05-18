@@ -1,46 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
-import User from "./User";
+import Clock from "./Clock";
+import { useState } from "react";
 
 
 function App() {
-  const userData = [
-    {
-      name: "Anil",
-      age: "29",
-      email: "anil@test.com",
-      id: 1,
-    },
-    {
-      name: "sam",
-      age: "34",
-      email: "sam@test.com",
-      id: 2,
-    },
-    {
-      name: "peter",
-      age: "20",
-      email: "peter@test.com",
-      id: 3,
-    },
-    {
-      name: "bruce",
-      age: "50",
-      email: "bruce@test.com",
-      id: 4,
-    },
-  ];
-  return (
-    <div>
-      <h1>Loop in JSX with map function</h1>
-      {userData.map((user) => (
-        <div key={user.id}>
-          <User data={user} />
-        </div>
-      ))}
-    </div>
-  
-  );
-}         
+  const [color, setColor] = useState("green");
+  return(
+    <>
+      <h1>Digital Clock in React JS</h1>
+      <select onChange={(e) => setColor(e.target.value)}>
+        <option value="orange">orange</option>
+        <option value="pink">pink</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+      </select>
+      <Clock color={color} />
+    </>
+);
        
 export default App;
